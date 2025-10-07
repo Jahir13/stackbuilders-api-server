@@ -9,8 +9,5 @@ export function getLastUpdatedRepos(repos) {
 }
 
 export function sumStars(repos) {
-  return repos.reduce(
-    (acc, currentItem) => acc + currentItem.stargazers_count,
-    0,
-  );
+  return repos.reduce((sum, repo) => sum + repo.stargazers_count, 0);
 }
